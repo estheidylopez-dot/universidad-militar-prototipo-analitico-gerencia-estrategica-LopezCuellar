@@ -1,45 +1,47 @@
-## Supuesto Central
+## Contexto de la Hipótesis
 
-| Supuesto central |
-|---|
-| Si el equipo tecnológico fortalece sus conocimientos técnicos y estratégicos en integración ERP y transformación digital, entonces se mejorará la integración de la información. |
+| Columna | Valor |
+|---|---|
+| Causa | Debilidades en conocimientos técnicos y estratégicos en ERP y transformación digital |
+| Fase DT origen (E/D/I) | Definir |
+| Insight de empatía | El usuario siente que la información se encuentra distribuida entre múltiples ERP y lo genera procesos manuales |
+| Supuesto central | Si el equipo tecnológico fortalece sus conocimientos técnicos y estratégicos en integración ERP y transformación digital, entonces se mejorará la integración de la información. |
+| Pregunta analítica | ¿Hasta qué punto el fortalecimiento de competencias técnicas y estratégicas del equipo tecnológico contribuye a mejorar la integración de la información? |
 
-## Paso 1: Objetivo del Indicador
+## Variables y Clasificación Analítica
 
-| ¿QUÉ HAGO? (Acción) | ¿CÓMO LO HAGO? (Método) | ¿PARA QUÉ LO HAGO? (Propósito) |
-|---|---|---|
-| Diseño y evalúo un indicador analítico que mida el impacto del fortalecimiento de competencias técnicas y estratégicas del equipo tecnológico sobre el nivel de integración de la información en la organización. | [Ver bloque de código 1] | [Ver bloque de código 2] |
+| Variable | Tipo |
+|---|---|
+| porcentaje_integracion_erp | Outcome |
+| horas_capacitacion_erp | Explic |
+| nivel_conocimiento_transformacion_digital | Explic |
+| reprocesos_operativos | Outcome |
+| area_funcional | Segmento |
+| proyecto_tecnologico | Segmento |
+| tiempo_conciliacion_datos | Outcome |
+| inconsistencias_informacion | Outcome |
+| procesos_automatizados | Outcome |
+| uso_excel_operativo | Outcome |
+| antiguedad_colaborador | Control |
+| cantidad_usuarios_erp | Control |
+| complejidad_proceso | Control |
+| sede | Segmento |
+| tipo_area | Segmento |
+| tipo_erp | Segmento |
+| experiencia_integracion_erp | Explic |
 
-## Paso 2 al Paso 6: Construcción del Indicador
+## Diseño Analítico y Validación
 
-| Aspecto específico a Medir | Público objetivo (Para quién): | Dimensión (Marca una) | Nombre del indicador | Numerador (Variable Y) | Denominador (Población) | Fórmula (Matemática) | Prueba de Estrés (Riesgo Matemático) | Tipo (Marca una) | Frecuencia de medición | Fuente de datos (Verificación) | Línea base (Patrón actual) | Patrón esperado (Meta) | Condición de refutación (Fallo). Es el número que te dice que tu idea no funcionó. |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| El nivel de contribución que tienen las competencias técnicas y estratégicas del equipo tecnológico sobre la integración eficiente y confiable de la información empresarial, reflejado en la reducción de reprocesos, disminución de inconsistencias, menor tiempo de conciliación de datos y mayor automatización de procesos ERP. | 1) Dirección de Tecnología (TI)<br>2) Líderes de Transformación Digital | Eficacia (¿Logra el resultado?) | **Índice de Integración Operativa Potenciada (IIOP)** | `(%IntegraciónERP+ProcesosAutomatizados)×(HorasCapacitación+NivelConocimiento+ExperienciaERP)` | `(Reprocesos+TiempoConciliación+Inconsistencias+UsoExcel)+1` | `IIOP=((porcentaje_integracion_erp+procesos_automatizados)*(horas_capacitacion_erp+nivel_conocimiento_transformacion_digital+experiencia_integracion_erp))/((reprocesos_operativos+tiempo_conciliacion_datos+inconsistencias_informacion+uso_excel_operativo)+1)` | [Ver bloque de código 3] | Índice | Mensual: Una vez al mes | [Ver bloque de código 4] | entre 31 a 50 | entre 81 a 100 | **menor o igual a 65** |
-
-### Bloque de código 1
-
-```text
-Lo hago mediante el análisis de variables explicativas relacionadas con capacitación, conocimiento en transformación digital y experiencia en integración ERP, evaluando su relación con resultados operativos asociados a la integración de información, tales como:
-
-porcentaje_integracion_erp
-reprocesos_operativos
-tiempo_conciliacion_datos
-inconsistencias_informacion
-procesos_automatizados
-uso_excel_operativo
-
-El análisis incorpora además:
-
-Variables de control:
-antiguedad_colaborador
-cantidad_usuarios_erp
-complejidad_proceso
-
-Variables de segmentación:
-area_funcional
-proyecto_tecnologico
-sede
-tipo_area
-tipo_erp
-
-Metodológicamente, el indicador se construye mediante un enfoque de Product Analytics y analítica correlacional/multivariable, buscando identificar el grado de contribución de las capacidades del equipo sobre la eficiencia e integración operativa.
+| Columna | Valor |
+|---|---|
+| Cálculo / Transformación | `Xnorm=(X−Xmin)/(Xmax−Xmin)`<br>`0≤Xnorm≤1` |
+| Métrica (nombre + fórmula) | **Índice de Integración Operativa Potenciada (IIOP)**<br>`(%IntegraciónERP+ProcesosAutomatizados)×(HorasCapacitación+NivelConocimiento+ExperienciaERP)` |
+| Periodo / Segmento | Periodo de 4 a 7 Meses |
+| Patrón esperado (si cierta) | entre 81 a 100 |
+| Condición refutación | **entre 81 a 100** |
+| Valor esperado para usuario/ciudadano | Los colaboradores percibirán una reducción en la carga operativa.<br>La compañía contará con una integración de información más eficiente. |
+| Riesgo si falsa | La organización seguiría asumiendo altos costos operativos y reprocesos |
+| Acción si confirma | Implementar capacitación técnica especializada, estandarización de procesos, automatización operativa y consolidación progresiva de la información en un único ecosistema ERP integrado. |
+| Acción si refuta | No se ejecuta ningun proceso de Capacitación.<br>Se posterga plan de capacitación.<br>Se solicita al area de Tecnologia que construya planes de formación. |
+| Experimento analítico mínimo (query + visual 1 línea) | Vacío |
+| Estado (V/A/R) | Vacío |
