@@ -1,76 +1,20 @@
-## Contexto de la Hipótesis
+## Bloque 1. El Anclaje del Problema (Fundamentos)
 
-| Causa | Fase DT origen (E/D/I) | Insight de empatía | Supuesto central | Pregunta analítica |
-|---|---|---|---|---|
-| Debilidades en conocimientos técnicos y estratégicos en ERP y transformación digital | Definir | El usuario siente que la información se encuentra distribuida entre múltiples ERP y lo genera procesos manuales | Si el equipo tecnológico fortalece sus conocimientos técnicos y estratégicos en integración ERP y transformación digital, entonces se mejorará la integración de la información. | ¿Hasta qué punto el fortalecimiento de competencias técnicas y estratégicas del equipo tecnológico contribuye a mejorar la integración de la información? |
+| Causa | Fase DT origen (E/D/I) | Insight de empatía | Supuesto central |
+|-------|-------------------------|--------------------|------------------|
+| ¿Qué crees que está pasando “detrás” del síntoma? Debe sonar a mecanismo, no a queja. | ¿De qué momento de Design Thinking salió? | Una observación/cita corta que te inspiró la causa. | ¿Qué crees que une la causa con el resultado? Es la “apuesta”. |
+| Limitadas capacidades técnicas y estratégicas del equipo de Tecnología para liderar la integración e implementación de los sistemas ERP corporativos. | Definir | El usuario percibe que la información está distribuida entre múltiples ERP, lo que lo obliga a realizar procesos manuales para consolidarla. | Si se fortalecen las capacidades técnicas y estratégicas del equipo de Tecnología, aumentará el nivel de integración entre los sistemas ERP, reduciendo la dependencia de procesos manuales en las áreas operativas. |
 
-## Variables y Clasificación Analítica
+## Bloque 2. La Formulación Científica (La Hipótesis)
 
-| Variables (nombres exactos) | Tipo (Outcome / Explic / Control / Segmento) | Cálculo / Transformación |
-|---|---|---|
-| [Ver bloque de código 1] | [Ver bloque de código 2] | `Xnorm=(X−Xmin)/(Xmax−Xmin)`<br>`0≤Xnorm≤1` |
+| Pregunta analítica | Variables (nombres exactos) | Tipo (Outcome / Explic / Control / Segmento) | Cálculo / Transformación | Métrica (nombre + fórmula) | Periodo / Segmento | Patrón esperado (si cierta) | Condición refutación |
+|---------------------|-----------------------------|----------------------------------------------|--------------------------|----------------------------|--------------------|-----------------------------|----------------------|
+| Forma neutra y medible de la causa. Debe admitir “Sí/No” o “Mayor/Menor”. | Columnas que usarás tal cual aparecen en la base (no inventes nombres). | Etiqueta cada variable:<br>1. Outcome: lo que quieres explicar (ej. recompra_30d).<br>2. Explic (explicativa): lo que crees que causa (ej. comentario_malestar).<br>3. Control: cosas que pueden distorsionar (ej. canal).<br>4. Segmento: variable para cortar resultados (ej. canal, zona). | Operaciones necesarias antes de la métrica final. | Nombre corto + cómo se calcula. | Rango temporal y cortes. | La condición numérica que esperas ver si tu causa es real. | El rango / comparación que tiraría tu hipótesis. Debe ser diferente (no repetir con “no”). |
+| ¿Cuál es la relación entre el nivel de competencias del equipo de Tecnología y el nivel de integración de los sistemas ERP corporativos? | `porcentaje_integracion_erp`<br>`nivel_conocimiento_transformacion_digital` | Outcome<br>Explic | `Xnorm = (X - Xmin) / (Xmax - Xmin)`<br><br>`0 ≤ Xnorm ≤ 1` | **`ICI−ERP = nivel_competencias_erp^norm × porcentaje_integracion_erp^norm`** | Periodo de 4 a 7 Meses | Optimizada (81–100) | **Funcional básica o inferior (0–65)** |
 
-## Diseño Analítico y Validación
+## Bloque 3. Decisión y Validación de la Hipótesis
 
-| Métrica (nombre + fórmula) | Periodo / Segmento | Patrón esperado (si cierta) | Condición refutación | Valor esperado para usuario/ciudadano | Riesgo si falsa | Acción si confirma | Acción si refuta | Experimento analítico mínimo (query + visual 1 línea) | Estado (V/A/R) |
-|---|---|---|---|---|---|---|---|---|---|
-| **Índice de Integración Operativa Potenciada (IIOP)**<br>`(%IntegraciónERP+ProcesosAutomatizados)×(HorasCapacitación+NivelConocimiento+ExperienciaERP)` | Periodo de 4 a 7 Meses | entre 81 a 100 | **entre 81 a 100** | [Ver bloque de código 3] | La organización seguiría asumiendo altos costos operativos y reprocesos | Implementar capacitación técnica especializada, estandarización de procesos, automatización operativa y consolidación progresiva de la información en un único ecosistema ERP integrado. | [Ver bloque de código 4] |  |  |
-
-### Bloque de código 1
-
-```text
-1. porcentaje_integracion_erp
-2. horas_capacitacion_erp
-3. nivel_conocimiento_transformacion_digital
-4. reprocesos_operativos
-5. area_funcional
-6. proyecto_tecnologico
-7. tiempo_conciliacion_datos
-8. inconsistencias_informacion
-9. procesos_automatizados
-10. uso_excel_operativo
-11. antiguedad_colaborador
-12. cantidad_usuarios_erp
-13. complejidad_proceso
-14. sede
-15. tipo_area
-16. tipo_erp
-17. experiencia_integracion_erp
-```
-
-### Bloque de código 2
-
-```text
-1. Outcome
-2. Explic
-3. Explic
-4. Outcome
-5. Segmento
-6. Segmento
-7. Outcome
-8. Outcome
-9. Outcome
-10. Outcome
-11. Control
-12. Control
-13. Control
-14. Segmento
-15. Segmento
-16. Segmento
-17. Explic
-```
-
-### Bloque de código 3
-
-```text
-Los colaboradores percibirán una reducción en la carga operativa.
-La compañía contará con una integración de información más eficiente.
-```
-
-### Bloque de código 4
-
-```text
-No se ejecuta ningun proceso de Capacitación.
-Se posterga plan de capacitación.
-Se solciita al area de Tecnologia que construya planes de formación.
-```
+| Valor esperado para usuario/ciudadano | Riesgo si falsa | Acción si confirma | Acción si refuta |
+|----------------------------------------|-----------------|-------------------|------------------|
+| Beneficio concreto si confirmas la hipótesis (en lenguaje humano).<br><br>Clavo: debería sonar a mejora perceptible, no a KPI interno. | Qué perderías si sigues insistiendo en esta causa equivocada.<br><br>Esto ayuda a priorizar falsar rápido. | Movimiento específico inmediato (no “optimizar estrategia”).<br><br>Debe ser ejecutable en la organización. | Ruta alternativa (no repetir la de confirmar). |
+| Los colaboradores percibirán una reducción en la carga operativa.<br>La compañía contará con una integración de información más eficiente. | La organización continuaría invirtiendo recursos en fortalecer capacidades que no explican la baja integración de los ERP, manteniendo altos costos operativos y reprocesos. | Fortalecer el programa de desarrollo de capacidades del equipo de Tecnología y continuar el plan de integración progresiva entre los sistemas ERP. | Revisar la estrategia de integración ERP, evaluar la arquitectura tecnológica y considerar alternativas como middleware, APIs o Automatización Robótica de Procesos (RPA) para reducir la dependencia de procesos manuales. |
