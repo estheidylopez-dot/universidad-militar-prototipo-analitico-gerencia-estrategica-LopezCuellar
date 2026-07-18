@@ -20,3 +20,22 @@
 ```python
 # Query/Cálculo: df.groupby('nivel_competencias_erp')['porcentaje_integracion_erp'].mean()
 # Visual: Scatter plot con línea de tendencia (regresión) entre ambas variables y matriz de correlación de Pearson.
+
+
+## Supuesto Central
+
+| Supuesto central |
+| --- |
+| Si existe una relación positiva entre el nivel de competencias del equipo de Tecnología y el nivel de integración de los sistemas ERP corporativos, entonces deberia ser mayor la integracion, gobernacion y estandarizaciòn de manera articulada de los sistemas de informacion y los datos empresariales. |
+
+## Paso 1: Objetivo del Indicador / Paso 2: Factor Crítico
+
+| ¿QUÉ HAGO? (Acción) | ¿CÓMO LO HAGO? (Método) | ¿PARA QUÉ LO HAGO? (Propósito) | Aspecto específico a Medir | Público objetivo (Para quién): | Dimensión (Marca una) |
+| --- | --- | --- | --- | --- | --- |
+| Mido el nivel de integración de los sistemas ERP corporativos y analizo su relación con el nivel de competencias del equipo de Tecnología. | Transformo las respuestas de las variables de la encuesta de una escala de 1 a 5 a una escala común de 0 a 100 mediante normalización lineal. Posteriormente, calculo el indicador considerando las variables complementarias y la segmentación por area. Complementado con acompañamiento técnico durante la implementación y seguimiento al avance de la integración entre los sistemas empresariales. | Determinar si el nivel de competencias del equipo de Tecnología constituye un factor asociado al nivel de integración de los sistemas ERP y generar evidencia para orientar la priorización de acciones técnicas, organizacionales y de gobernanza de datos frente a la fragmentación de la información empresarial. | Nivel de integración de los sistemas ERP corporativos y su relación con el nivel de competencias del equipo de Tecnología. | Público directo: equipo de Tecnología y responsables de la gestión, administración e integración de los sistemas de información.<br>Beneficiarios indirectos: colaboradores de las áreas administrativas, financieras, comerciales y operativas que utilizan información proveniente de los sistemas empresariales. | Eficacia (¿Logra el resultado?) |
+
+## Paso 3: Fórmula / Paso 4: Unidad / Paso 5: Fuentes / Paso 6: Seguimiento
+
+| Nombre del indicador | Numerador (Variable Y) | Denominador (Población) | Fórmula (Matemática) | Prueba de Estrés (Riesgo Matemático) | Tipo (Marca una) | Frecuencia de medición | Fuente de datos (Verificación) | Línea base (Patrón actual) | Patrón esperado (Meta) | Condición de refutación (Fallo). Es el número que te dice que tu idea no funcionó. |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Nivel de Integración de los Sistemas ERP (NIS-ERP)** | `∑(porcentaje_integracion_erp0−100​)` | `n` | `NIS-ERP = ∑(porcentaje_integracion_erp0−100​) / n` | 1. Las variables ordinales deben transformarse de manera consistente a una escala de 0 a 100 mediante normalización lineal antes de realizar comparaciones o cálculos agregados.<br>2. Los registros nulos, duplicados y errores de formato deben identificarse y documentarse antes del análisis.<br>3. El indicador se construye a partir de datos derivados de una encuesta y, por tanto, mide percepciones estructuradas de los participantes; no sustituye la medición objetiva mediante logs de servidor, transacciones, usuarios activos o tiempos de sesión.<br>4. El promedio general puede ocultar diferencias entre áreas, por lo que los resultados deben analizarse también de forma segmentada mediante tipo_area.<br>5. El nivel de competencias y el nivel de integración deben mantenerse como variables separadas; no se construye un índice multiplicativo entre ambas.<br>6. Una asociación positiva entre las variables no demuestra causalidad.<br>7. Si no se identifica una relación positiva entre nivel_competencias_erp y porcentaje_integracion_erp, el supuesto central no será respaldado y la investigación deberá reorientar la explicación hacia otros factores técnicos y organizacionales, como la arquitectura de integración, la interoperabilidad, la gobernanza de datos, la estandarización y la gestión de los procesos | Índice | Mensual: Una vez al mes | Encuesta aplicada a usuarios de los sistemas ERP para medir la percepción del nivel de integración y de las capacidades del equipo de Tecnología, complementada con los registros corporativos de SAP Business One, Teowin, Madernet y la base de datos ACCES cuando corresponda. |  | entre 81 a 100 | **Igual o menor a 40** |
